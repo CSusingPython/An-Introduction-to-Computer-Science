@@ -1,0 +1,94 @@
+chapter 7 Decision Structures
+
+<relop> : relational operator
+
+1) Simple Decisions
+
+In a program designed to be either imported (without running) or run directly,
+the call to ma in at the bottom must be made conditional. A simple decision
+should do the trick:
+
+[imported]
+if <condition>:
+<body>
+
+[run directly]
+if <condition>:
+main ( )
+
+Whenever a module is imported, Python creates a special variable, __name__ ,
+inside that module and assigns it a string representing the module's name.
+>>> import math
+>>> math . __name__
+'math'
+
+However, when Python code is being run directly (not imported), Python
+sets the value of _..name__ to be '__main__ ' .
+
+>>> __name__
+, __ main __ ,
+
+2) Two-Way Decisions
+
+if <condition> :
+<statements>
+else :
+<statements>
+
+3) Multi-Way Decisions
+
+if < condition1 > :
+< case 1 statements>
+elif < condition2> :
+< case2 statements>
+elif < condition3> :
+< case3 statements>
+...
+else :
+<default statements>
+
+4. Exception Handling
+
+try :
+<body >
+except <ErrorType> :
+<handler>
+
+5. Study in Design: Max of Three
+Strategy 1: Compare Each to All
+if x1 >= x2 and x1 >= x3 :
+ma xval = x1
+el if x2 >= x1 and x2 >= x3 :
+ma xval - x2
+el se :
+ma xval - x3
+
+Strategy 2: Decision Tree
+if x1 >= x2 :
+if x1 >= x3 :
+maxval - x1
+el se :
+ma xval - x3
+el se :
+if x2 >= x3 :
+ma xval - x2
+el se :
+maxval - x3
+
+Strategy 3: Sequential Processing
+ma xval = x1
+if x2 > maxval:
+ma xval = x2
+if x3 > ma xval:
+ma xval = x3
+
+Strategy 4: Use Python
+d ef ma in ( ):
+x1, x2, x3 = eval ( input (" Pl ea se enter three val ues: " ) )
+print (" T he la rgest val ue is", ma x (x1, x2, x3) )
+
+* Don't be afraid to step back and think
+about the overarching problem. Similarly, when designing programs, you
+should always have an eye toward making your program more generally
+useful.
+* Don't reinvent the wheel.
