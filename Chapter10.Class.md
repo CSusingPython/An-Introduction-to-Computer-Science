@@ -47,7 +47,7 @@ def main():
 
 ```python
 def main():
-    angle, vel, hO, time = get!nputs()
+    angle, vel, hO, time = getinputs()
     cball = Projectile(angle, vel, hO)
     while cball.getY() >= 0:
         cball.update(time)
@@ -75,12 +75,60 @@ class 클래스 이름:
 + 수정해야하는 부분이 생긴 경우
 
 클래스 정의 중
-1.  self 
-2.  __init__
-	
+1.  self == 셀프 인자 객체를 가르키는 인자 
+2.  __init__ 객체를 생성하는 인자 및 객체의 인스턴스 객체를 어떤 값으로 초기화 하는 역할 
+----------------------------------------------------------------------------------
 ## https://wikidocs.net/28
-	
 
+### 발사체 클래스 
+```python
+class Projectile:
+    def __init__(self, angle, velocity, height):
+        self.xpos = 0.0
+        self.ypos =height
+        theta = math.radians(angle)
+        self.xvel =velocity* math.cos(theta)
+        self.yvel =velocity* math.sin(theta) 
+```
+클래스 생성 
+``` python
+from math import sin, cos, radians
+
+    class Projectile:
+        def __init__(self, angle, velocity, height):
+        self.xpos = 0.0
+        self.ypos =height
+        theta = math.radians(angle)
+        self.xvel =velocity* math.cos(theta)
+        self.yvel =velocity* math.sin(theta) 
+
+        def update(self, time):
+            self.xpos = self.xpos + time * self.xvel
+            yvel1 = self.yvel - 9.8 * time
+            self.ypos - self.ypos + time * (self.yvel + yvel1) / 2.0
+            self.yvel = yvel1
+
+        def detY(self):
+            return self.ypos
+
+        def getX(self):
+            return self.xpos
+
+    def getlnputs():
+        a= float(input("Enter the launch angle (in degrees): "))
+        v = float(input("Enter the initial velocity (in meters/sec): "))
+        h = float(input("Enter the initial height (in meters): "))
+        t = float(input( "Enter the time interval between position calculations: "))
+        return a,v,h,t
+
+    def main():
+        angle, vel, hO, time = getlnputs()
+        cball = Projectile(angle, vel, hO)
+        while cball.getY() >= 0:
+            cball.update(time)
+            print ("\nDistance traveled: {0: 0 .if} meters.". format (cball.getXO)) 
+
+```
 
 
 
