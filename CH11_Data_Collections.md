@@ -18,13 +18,13 @@ myList = [36, 18, 5, 4]
 
 | operatonr           | meaning                             |
 | ------------------- | ----------------------------------- |
-| <seq> + <seq>       | concatenation                       |
-| <seq>* <int-expr>   | repetition                          |
-| <seq>[]             | indexing                            |
-| len(<seq>)          | length                              |
-| <seq>[:]            | slicing                             |
-| for <var> in <seq>: | iteration                           |
-| <expr> in <seq>     | membership check(returns a boolean) |
+| [seq] + [seq]       | concatenation                       |
+| [seq]* [int-expr]   | repetition                          |
+| seq[]               | indexing                            |
+| len([seq])          | length                              |
+| seq[:]              | slicing                             |
+| for [var] in [seq]: | iteration                           |
+| [expr] in [seq]     | membership check(returns a boolean) |
 
 
 
@@ -109,14 +109,14 @@ passwd["bill"] = "bluescreen"
 
 #### Dictionary Methods
 
-- <key> in <dict> : Return True if dictionary contains the key
-- <dict>.keys() : returns a sequence of keys
-- <dict>.values() : returns a sequence of values
-- <dict>.items() : returns a sequence of tuples (key, value)
-- <dict>.get(<key>, <default>) : if dictionary has key reutrns its value, otherwise default
-- del <dict>[<key>] : deletes the specified entry
-- <dict>.clear() : deltes all entries
-- for <ar> in <dict>: : loops over the keys
+- [key] in [dict] : Return True if dictionary contains the key
+- [dict].keys() : returns a sequence of keys
+- [dict].values() : returns a sequence of values
+- [dict].items() : returns a sequence of tuples (key, value)
+- [dict].get([key], [default]) : if dictionary has key reutrns its value, otherwise default
+- del dict[key] : deletes the specified entry
+- [dict].clear() : deltes all entries
+- for [var] in [dict]: : loops over the keys
 
 
 
