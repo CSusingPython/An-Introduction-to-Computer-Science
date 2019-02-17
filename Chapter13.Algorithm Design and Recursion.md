@@ -113,7 +113,7 @@ def loopfib(n):
     curr= 1
     prev= 1
     for i in range(n-2):
-	    curr, prev = curr+prev, curr return curr
+	    curr, prev = curr+prev, curr
     return curr
 
 def fib(n):
